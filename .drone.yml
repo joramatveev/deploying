@@ -1,0 +1,39 @@
+---
+kind: pipeline
+type: docker
+name: "Staging: Build & push docker image on production"
+
+clone:
+  depth: 1
+
+steps:
+- name: "Build & Test frontend"
+  image: "node:alpine"  
+  commands:
+  - yarn install
+  - yarn lint
+  
+- name: "Build & Push docker image"
+  image: plugins/docker 
+  settings:
+    debug: true
+    auto_tag: true
+    skip_tls_verify: true     
+    repo: joramatveev/myworklyspace
+    registry: docker.io
+    dockerfile: ./api/Dockerfile      
+    tags: ["${DRONE_COMMIT_SHA:0:7}", "latest"]
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+
+image_pull_secrets: 
+ - dockerconfigjson
+ 
+
+trigger:
+  branches:
+    - master
+  event:
+    - push
