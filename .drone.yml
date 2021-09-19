@@ -16,7 +16,6 @@ steps:
 - name: "Build & Push docker image"
   image: plugins/docker 
   settings:
-    debug: true
     auto_tag: true
     skip_tls_verify: true     
     repo: joramatveev/myworklyspace
