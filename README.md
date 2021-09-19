@@ -1,3 +1,13 @@
+## Screenshot's
+
+![drone-commit](https://user-images.githubusercontent.com/88455937/133941877-34ba8de7-06fb-474b-a55d-e0414375506e.png)
+
+![drone-deployment-details](https://user-images.githubusercontent.com/88455937/133941886-7f6b673b-1b39-4fbd-9df3-38ec66c33e6c.jpg)
+
+![drone-settings-general](https://user-images.githubusercontent.com/88455937/133941961-5fca5c05-e230-46be-b590-c730c2f2e224.png)
+
+![drone-settings-secrets](https://user-images.githubusercontent.com/88455937/133941969-72ab4a42-51c9-4a9d-be2d-ab2a0e9047f0.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
